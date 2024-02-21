@@ -6,4 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".AddActivity">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="109dp"
+        android:layout_height="72dp"
+        android:text="Save"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="638dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="98dp"
+        android:layout_height="67dp"
+        android:text="Cancel"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="638dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="199dp"
+        android:layout_height="26dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due Date"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="197dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="124dp"
+        android:layout_height="26dp"
+        android:text="Completed?"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="166dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date completed"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="196dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
