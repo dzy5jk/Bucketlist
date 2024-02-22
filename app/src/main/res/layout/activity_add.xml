@@ -11,24 +11,28 @@
         android:layout_width="109dp"
         android:layout_height="72dp"
         android:text="Save"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="638dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="98dp"
         android:layout_height="67dp"
+        android:layout_marginEnd="32dp"
         android:text="Cancel"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="638dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Item Name"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="97dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextText"
@@ -37,8 +41,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="97dp" />
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="57dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -54,7 +58,8 @@
         android:layout_height="38dp"
         android:ems="10"
         android:inputType="date"
-        tools:layout_editor_absoluteX="161dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
         tools:layout_editor_absoluteY="123dp" />
 
     <CheckBox
@@ -62,7 +67,8 @@
         android:layout_width="124dp"
         android:layout_height="26dp"
         android:text="Completed?"
-        tools:layout_editor_absoluteX="63dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="166dp" />
 
     <TextView
@@ -70,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Date completed"
-        tools:layout_editor_absoluteX="63dp"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="209dp" />
 
     <EditText
@@ -79,6 +85,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="date"
-        tools:layout_editor_absoluteX="169dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
         tools:layout_editor_absoluteY="196dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
