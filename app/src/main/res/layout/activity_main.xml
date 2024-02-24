@@ -25,28 +25,41 @@
                 android:id="@+id/button3"
                 android:layout_width="114dp"
                 android:layout_height="42dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="44dp"
+                android:backgroundTint="#3F51B5"
                 android:text="ADD"
+                android:textColorHighlight="#FF9800"
+                android:textColorLink="#FF9800"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintHorizontal_bias="0.424"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#FF9800" />
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="280dp"
+                android:layout_height="78dp"
                 android:fontFamily="sans-serif-black"
                 android:text="My UVA Bucketlist"
+                android:textColor="#FF9800"
+                android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.587"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ListView
-                android:layout_width="409dp"
-                android:layout_height="572dp"
+                android:id="@+id/lview"
+                android:layout_width="302dp"
+                android:layout_height="418dp"
                 app:layout_constraintBottom_toTopOf="@+id/button3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.596"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
-                tools:layout_editor_absoluteX="1dp" />
+                app:layout_constraintVertical_bias="0.275" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
