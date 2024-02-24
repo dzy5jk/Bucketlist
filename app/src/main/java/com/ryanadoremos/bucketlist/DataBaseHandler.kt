@@ -1,13 +1,16 @@
 package com.ryanadoremos.bucketlist
 
+
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+
 class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
     SQLiteOpenHelper(context, DATABASE_NAME, factory, DATABASE_VERSION) {
+
 
     override fun onCreate(db: SQLiteDatabase) {
         val query = ("CREATE TABLE " + TABLE_NAME + " (" +
@@ -19,14 +22,17 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         db.execSQL(query)
     }
 
+
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
         onCreate(db)
     }
 
+
     override fun onDowngrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         // Handle database downgrade if necessary
     }
+
 
     fun addName(name: String, due: String, complete: Int, done: String) {
         val values = ContentValues().apply {
@@ -40,12 +46,15 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         }
     }
 
+
     fun getName(): Cursor? = readableDatabase.rawQuery("SELECT * FROM $TABLE_NAME ORDER BY $NAME_COl", null)
+
 
     fun getItemById(id: Int): Cursor? {
         val db = this.readableDatabase
         return db.query(TABLE_NAME, null, "$ID_COL = ?", arrayOf(id.toString()), null, null, null)
     }
+
 
     fun updateItem(id: Int, name: String, due: String, completed: Int, done: String) {
         val values = ContentValues().apply {
@@ -58,6 +67,7 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         db.update(TABLE_NAME, values, "$ID_COL = ?", arrayOf(id.toString()))
         db.close()
     }
+
 
     companion object {
         private const val DATABASE_NAME = "BucketList"
